@@ -1,5 +1,6 @@
 <!--index.wxml-->
-<v-like like="{{ classic.like_status }}" count="{{ classic.fav_nums }}"/>
+<v-epsoide/>
+<v-like bind:like="onLik" like="{{ classic.like_status }}" count="{{ classic.fav_nums }}"/>
 <v-movie img="{{ classic.image }}" content="{{ classic.content }} "/>
 <view class="container">
 </view>

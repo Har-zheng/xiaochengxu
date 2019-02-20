@@ -1,6 +1,8 @@
 //index.js
 import { CalssicModel } from '../../models/classic.js'
+import { LikeModel } from '../../models/like.js'
 let classic = new CalssicModel()
+let likeModel = new LikeModel()
 //获取应用实例
 const app = getApp()
 
@@ -47,6 +49,11 @@ Page({
         }
       })
     }
+  },
+  onLik: function(event) {
+    let behavior = event.detail.behavior
+    console.log(behavior, this.data.classic.id, this.data.classic.type)
+    likeModel.like(behavior, this.data.classic.id, this.data.classic.type)
   },
   getUserInfo: function(e) {
     console.log(e)

@@ -1,5 +1,5 @@
 import { HTTP } from '../utils/http.js'
-class CalssicModel extends HTTP{
+class CalssicModel extends HTTP {
     getLatest(sCallback) {
         this.request({
             url: '/classic/latest',
