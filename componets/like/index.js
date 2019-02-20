@@ -23,7 +23,6 @@ Component({
     yesSrc: 'images/like.png',
     noSrc: 'images/like@dis.png'
   },
-
   /**
    * 组件的方法列表
    */
