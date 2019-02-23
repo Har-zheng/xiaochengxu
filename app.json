@@ -8,5 +8,6 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "黄金屋",
     "navigationBarTextStyle":"black"
-  }
+  },
+  "requiredBackgroundModes": ["audio"]
 }

@@ -1,14 +1,18 @@
 //index.js
 import { CalssicModel } from '../../models/classic.js'
 import { LikeModel } from '../../models/like.js'
-let classic = new CalssicModel()
+let calssicModel = new CalssicModel()
 let likeModel = new LikeModel()
 //获取应用实例
 const app = getApp()
 
 Page({
   data: {
-    classic: null
+    classic: null,
+    first: false,
+    latest: true,
+    likeCount: 0,
+    likeStatus: false
   },
   //事件处理函数
   bindViewTap: function() {
@@ -17,44 +21,47 @@ Page({
     })
   },
   onLoad: function () {
-   classic.getLatest((res) => {
+    calssicModel.getLatest((res) => {
       this.setData({
-        classic: res
+        classic: res,
+        likeCount: res.fav_nums,
+        likeStatus: res.like_status
       })
+      // latestClassic latestIndex currentclassic currentIndex
     })
-
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
   },
   onLik: function(event) {
     let behavior = event.detail.behavior
     console.log(event)
     likeModel.like(behavior, this.data.classic.id, this.data.classic.type)
   },
+  onNext: function(event) {
+   this._updateClassic('next')
+  },
+  
+  onPrevious: function(event) {
+    this._updateClassic('previous')
+  },
+  _updateClassic: function(nextOrPrevious){
+    let index = this.data.classic.index
+    console.log(index)
+    calssicModel.getClssic(index,nextOrPrevious, (res)=> {
+      this._getLikeStatus(res.id, res.type)
+      this.setData({
+        classic: res,
+        latest:calssicModel.isLatest(res.index),
+        first: calssicModel.isFirst(res.index)
+      })
+    })
+  },
+  _getLikeStatus: function(artID, category){
+    likeModel.getClassLikeStatus(artID, category, (res)=> {
+      this.setData({
+        likeCount: res.fav_nums,
+        likeStatus: res.like_status
+      })
+    })
+  }, 
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
