@@ -1,6 +1,10 @@
 //index.js
-import { CalssicModel } from '../../models/classic.js'
-import { LikeModel } from '../../models/like.js'
+import {
+  CalssicModel
+} from '../../models/classic.js'
+import {
+  LikeModel
+} from '../../models/like.js'
 let calssicModel = new CalssicModel()
 let likeModel = new LikeModel()
 //获取应用实例
@@ -15,7 +19,7 @@ Page({
     likeStatus: false
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
     })
@@ -30,39 +34,39 @@ Page({
       // latestClassic latestIndex currentclassic currentIndex
     })
   },
-  onLik: function(event) {
+  onLik: function (event) {
     let behavior = event.detail.behavior
     console.log(event)
     likeModel.like(behavior, this.data.classic.id, this.data.classic.type)
   },
-  onNext: function(event) {
-   this._updateClassic('next')
+  onNext: function (event) {
+    this._updateClassic('next')
   },
-  
-  onPrevious: function(event) {
+
+  onPrevious: function (event) {
     this._updateClassic('previous')
   },
-  _updateClassic: function(nextOrPrevious){
-    let index = this.data.classic.index
+  _updateClassic: function (nextOrPrevious) {
+    const index = this.data.classic.index
     console.log(index)
-    calssicModel.getClssic(index,nextOrPrevious, (res)=> {
+    calssicModel.getClssic(index, nextOrPrevious, (res) => {
       this._getLikeStatus(res.id, res.type)
       this.setData({
         classic: res,
-        latest:calssicModel.isLatest(res.index),
+        latest: calssicModel.isLatest(res.index),
         first: calssicModel.isFirst(res.index)
       })
     })
   },
-  _getLikeStatus: function(artID, category){
-    likeModel.getClassLikeStatus(artID, category, (res)=> {
+  _getLikeStatus: function (artID, category) {
+    likeModel.getClassLikeStatus(artID, category, (res) => {
       this.setData({
         likeCount: res.fav_nums,
         likeStatus: res.like_status
       })
     })
-  }, 
-  getUserInfo: function(e) {
+  },
+  getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({

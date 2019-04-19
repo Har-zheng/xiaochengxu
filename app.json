@@ -1,7 +1,10 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/book/book",
+    "pages/my/my", 
+    "pages/logs/logs",
+    "pages/book-detail/book-detail"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -9,5 +12,33 @@
     "navigationBarTitleText": "黄金屋",
     "navigationBarTextStyle":"black"
   },
-  "requiredBackgroundModes": ["audio"]
+  "requiredBackgroundModes": ["audio"],
+  "tabBar": {
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "color": "#c7c7c7",
+    "list": [
+      {
+        "selectedIconPath": "/images/tab/classic@highlight.png",
+        "iconPath": "/images/tab/classic.png",
+        "pagePath": "pages/index/index",
+        "text": "流行"
+        
+      },
+      {
+        "selectedIconPath": "/images/tab/book@highlight.png",
+        "iconPath": "/images/tab/book.png",
+        "pagePath": "pages/book/book",
+        "text": "书籍"
+        
+      },
+      {
+        "selectedIconPath": "/images/tab/my@highlight.png",
+        "iconPath": "/images/tab/my.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+        
+      }
+    ]
+  }
 }

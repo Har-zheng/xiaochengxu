@@ -6,7 +6,7 @@ Component({
   properties: {
     index: {
       type: Number,
-      observer: function(newVal, oldVal, chagedPth){
+      observer: function (newVal, oldVal, chagedPth) {
         let val = newVal < 10 ? '0' + newVal : newVal
         this.setData({
           _index: val
@@ -32,7 +32,7 @@ Component({
     let year = data.getFullYear()
     let month = data.getMonth()
     this.setData({
-      year: year,
+      year,
       month: this.data.months[month]
     })
   },

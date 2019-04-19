@@ -1,0 +1,6 @@
+<!--componets/tag/index.wxml-->
+<view class="container tag-class">
+    <slot name="befare"></slot>
+    <text >{{ text }}</text>
+    <slot name="after"></slot>
+</view>
