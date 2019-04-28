@@ -36,7 +36,7 @@ Page({
   },
   onLik: function (event) {
     let behavior = event.detail.behavior
-    console.log(event)
+    console.log(behavior)
     likeModel.like(behavior, this.data.classic.id, this.data.classic.type)
   },
   onNext: function (event) {

@@ -6,6 +6,7 @@ Page({
    * 组件的属性列表
    */
   properties: {
+    searching: false
   },
 
   /**
@@ -26,6 +27,16 @@ Page({
         books: res
         })
       })
+  },
+  onSearching: function(event) {
+    this.setData({
+      searching: true
+    })
+  },
+  onCancel(event) {
+    this.setData({
+      searching: false
+    })
   },
 
   /**
