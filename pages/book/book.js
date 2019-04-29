@@ -1,5 +1,6 @@
 // pages/book/book.js
 import { BookModel } from '../../models/book.js'
+import { random } from '../../utils/common.js'
 const bookModel = new BookModel()
 Page({
   /**
@@ -16,19 +17,20 @@ Page({
     // 纯粹callback 回调地狱 return
     // promise 代码风格 多个异步等待合并  不需要层层传递callback
     // async await 
-    books: []
-
+    books: [],
+    searching: false,
+    more: ''
   },
-  onLoad: function(){
-   const hotList =  bookModel.getHotList()
-   hotList.then(res => {
-       console.log(res)
-       this.setData({
+  onLoad: function () {
+    const hotList = bookModel.getHotList()
+    hotList.then(res => {
+      console.log(res)
+      this.setData({
         books: res
-        })
       })
+    })
   },
-  onSearching: function(event) {
+  onSearching: function (event) {
     this.setData({
       searching: true
     })
@@ -36,6 +38,12 @@ Page({
   onCancel(event) {
     this.setData({
       searching: false
+    })
+  },
+  onReachBottom() {
+    console.log(123)
+    this.setData({
+      more: random(16)
     })
   },
 
