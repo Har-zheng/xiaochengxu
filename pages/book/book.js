@@ -41,7 +41,6 @@ Page({
     })
   },
   onReachBottom() {
-    console.log(123)
     this.setData({
       more: random(16)
     })
