@@ -2,7 +2,8 @@
   "component": true,
   "usingComponents": {
     "v-tag": "/componets/tag/index",
-    "v-button": "/componets/image-button/index"
+    "v-button": "/componets/image-button/index",
+    "v-preview": "/componets/preview/index"
   },
   "backgroundColor": "#f5f5f5"
 }

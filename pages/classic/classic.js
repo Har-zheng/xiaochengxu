@@ -1,11 +1,11 @@
 import {
-  ClassicModel
+  CalssicModel
 } from '../../models/classic.js'
 import {
   LikeModel
 } from '../../models/like.js'
 
-const classicModel = new ClassicModel()
+const classicModel = new CalssicModel()
 const likeModel = new LikeModel()
 
 Component({

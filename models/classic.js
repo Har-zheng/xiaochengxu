@@ -39,6 +39,13 @@ class CalssicModel extends HTTP {
         let latestIndex = this._getLatestIndex()
         return latestIndex == index?true:false
     }
+    getMyFavor(success) {
+      const params = {
+          url: 'classic/favor',
+          success: success
+      }
+      this.request(params)
+  }
     _setLatestIndex(index){
         wx.setStorageSync('latest', index)
     }
