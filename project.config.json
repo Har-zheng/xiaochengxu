@@ -9,13 +9,21 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"autoAudits": false,
-		"checkInvalidKey": true
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.0",
 	"appid": "wxab28fe99a0747361",
-	"projectname": "xiaochengxutest",
+	"projectname": "xiaochengxu",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
