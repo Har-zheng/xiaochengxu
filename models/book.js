@@ -28,7 +28,7 @@ class BookModel extends HTTP {
   }
   getLikeStatus(bid) {
     return this.request({
-      url: `/book/${bid}/favor`
+      url: `book/${bid}/favor`
     })
   }
   getComments(bid) {
@@ -41,7 +41,7 @@ class BookModel extends HTTP {
       url: `book/add/short_comment`,
       method: 'POST',
       data: {
-        book_id: bid,
+        bookId: bid,
         content: comment
       }
     })

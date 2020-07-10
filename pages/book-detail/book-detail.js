@@ -52,7 +52,7 @@ Page({
       console.log(res)
       this.setData({
         book: res[0],
-        comments: res[1].comments,
+        comments: res[1],
         likeStatus: res[2].like_status,
         likeCount: res[2].fav_nums
       })
