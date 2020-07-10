@@ -1,6 +1,5 @@
 import { HTTP } from "../utils/http-p";
 
-
 class KeywordModel extends HTTP {
   key = 'q'
   maxLength = 10

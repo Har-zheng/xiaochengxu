@@ -26,7 +26,7 @@ Page({
     hotList.then(res => {
       console.log(res)
       this.setData({
-        books: res
+        books: res.key
       })
     })
   },
