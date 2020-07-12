@@ -1,7 +1,10 @@
 import {
     config
 } from '../config.js'
-import { Base64 } from 'js-base64'
+import {
+    Base64
+} from 'js-base64'
+import { Token } from '../models/token'
 const tips = {
     1: '抱歉出现了一个错误',
     1005: 'appkey无效',
@@ -25,7 +28,7 @@ class HTTP {
             this._request(url, resolve, reject, data, method)
         })
     }
-    _request(url, resolve, reject, data = {}, method = "GET") {
+    _request(url, resolve, reject, data = {}, method = "GET", noRefetch = false) {
         // url data method
         wx.request({
             url: config.api_base_url + url,
@@ -42,9 +45,20 @@ class HTTP {
                 if (code.startsWith('2')) {
                     resolve(res.data)
                 } else {
-                    reject()
-                    const error_code = res.data.error_code
-                    this._show_error(error_code)
+                    if (!noRefetch && code === '403') {
+                        this._refetch(
+                            url,
+                            resolve,
+                            reject,
+                            data,
+                            method
+                        )
+                    } else {
+                        reject()
+                        const error_code = res.data.error_code
+                        this._show_error(error_code)
+                    }
+
                 }
             },
             fail: (err) => {
@@ -59,6 +73,12 @@ class HTTP {
             title: tips[error_code],
             icon: 'none',
             duration: 2000
+        })
+    }
+    _refetch(...param){
+        const token = new Token()
+        token.getTokenFromServer((token) => {
+            this._request(...param, true)
         })
     }
     _encode() {

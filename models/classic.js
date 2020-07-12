@@ -47,10 +47,12 @@ class CalssicModel extends HTTP {
     }
     getMyFavor(success) {
         const params = {
-            url: 'classic/favor',
-            success: success
+            url: 'classic/favor'
         }
-        this.request(params)
+       const favor =   this.request(params)
+       favor.then(res => {
+        success(res)
+       })
     }
     _setLatestIndex(index) {
         wx.setStorageSync('latest', index)
