@@ -6,12 +6,14 @@
     "pages/logs/logs",
     "pages/book-detail/book-detail",
     "pages/about/about",
-    "pages/course/course"
+    "pages/course/course",
+    "pages/movie",
+    "pages/movie/movie"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "黄金屋",
+    "navigationBarTitleText": "南城荒凉北城伤",
     "navigationBarTextStyle": "black"
   },
   "requiredBackgroundModes": [
@@ -33,6 +35,12 @@
         "iconPath": "/images/tab/book.png",
         "pagePath": "pages/book/book",
         "text": "书籍"
+      },
+      {
+        "selectedIconPath": "/images/tab/book@highlight.png",
+        "iconPath": "/images/tab/book.png",
+        "pagePath": "pages/movie/movie",
+        "text": "电影"
       },
       {
         "selectedIconPath": "/images/tab/my@highlight.png",

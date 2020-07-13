@@ -26,11 +26,10 @@ Page({
   },
   onLoad: function () {
     calssicModel.getLatest((res) => {
-      console.log(res)
       this.setData({
         classic: res,
         likeCount: res.fav_nums,
-        likeStatus: res.like_status
+        likeStatus: res.likeStatus
       })
       // latestClassic latestIndex currentclassic currentIndex
     })
