@@ -1,6 +1,5 @@
 <!--pages/movie/movie.wxml-->
-<text>pages/movie/movie.wxml</text>
-<video src="https://z1.m1907.cn?jx=夏洛特烦恼"></video>
+<text>音乐播放器加载中</text>
 <video src="http://ykugc.cp31.ott.cibntv.net/65729454E024971E6A45F5BF1/03000A01005EF0AF045DEDB0230E41330D15D0-5262-4A8A-A322-3E0E679E0442.mp4"></video>
 
-<!-- <web-view  src="https://z1.m1907.cn?jx=夏洛特烦恼"></web-view> -->
+<!-- <web-view  src="http://www.guqiankun.com/tools/music/"></web-view> -->

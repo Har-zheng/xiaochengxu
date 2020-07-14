@@ -8,3 +8,11 @@
 - app.wxss是小程序的**全局样式表**，决定了全局页面的默认样式，在pages下的页面中的wxss样式会取代默认样式
 - project.config.json
 ### 一, JSON配置
+```javascript
+     {
+       "selectedIconPath": "/images/tab/music@highlight.png",
+       "iconPath": "/images/tab/music.png",
+       "pagePath": "pages/movie/movie",
+       "text": "音乐"
+     },
+```

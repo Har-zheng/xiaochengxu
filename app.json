@@ -36,12 +36,7 @@
         "pagePath": "pages/book/book",
         "text": "书籍"
       },
-      {
-        "selectedIconPath": "/images/tab/book@highlight.png",
-        "iconPath": "/images/tab/book.png",
-        "pagePath": "pages/movie/movie",
-        "text": "电影"
-      },
+ 
       {
         "selectedIconPath": "/images/tab/my@highlight.png",
         "iconPath": "/images/tab/my.png",
