@@ -13,7 +13,7 @@
     <view class="about-container">
         <view bind:tap="onJumpToAbout" class="about-us">
             <image src="/images/my/about.png" />
-            <text class="description">关于我们</text>
+            <text class="description">我的分享</text>
         </view>
         <view class="about-us">
             <text class="book-num">{{bookCount}}</text>

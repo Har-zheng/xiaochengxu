@@ -1,4 +1,25 @@
-<image class="about"  />
- <navigator class="nav" target="miniProgram" app-id="wx8ffc97ad5bcccc89" open-type="navigate">
+<!-- <image class="about"  /> -->
+ <!-- <navigator class="nav" target="miniProgram" app-id="wx8ffc97ad5bcccc89" open-type="navigate">
  <image class="vendor" src="/images/my/vendor.png"></image>
- </navigator> 
+ </navigator>  -->
+ <view class="about">
+<view class="title fonst-style"> “业精于勤，荒于嬉；行成于思，毁于随。——韩愈” </view>
+<view class="fonst-style myselfe">  开发是自己的喜欢,也是生活所迫  </view>
+<view class="content ">
+  写小程序的小心愿,终于完成了! 学习了很多.深入学习小程序其实也有很多路需要走,
+  下面我分享下完成这个小程序我所看的资源教程,分享大家,感兴趣的话学习收藏!
+</view>
+<text class="fonst-style"> 后期的话!我会在这个小程序开发分享资源的功能,感兴趣多关注下!!!☆⌒(*^-゜)v </text>
+<view>
+  <h4>
+    (纯正商业级应用-微信小程序开发实战) 建议资金充裕的话请购买正版课程
+  </h4>   
+
+<view>
+    链接: https://pan.baidu.com/s/1SmtgBbYMYXnwRanMKhkT2A 提取码: b2vg 
+    复制这段内容后打开百度网盘手机 App，操作更方便哦
+    <button>点击复制</button>
+</view>
+
+</view>
+</view>

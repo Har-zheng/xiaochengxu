@@ -6,9 +6,7 @@
     "pages/logs/logs",
     "pages/book-detail/book-detail",
     "pages/about/about",
-    "pages/course/course",
-    "pages/movie",
-    "pages/movie/movie"
+    "pages/course/course"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -36,7 +34,6 @@
         "pagePath": "pages/book/book",
         "text": "书籍"
       },
- 
       {
         "selectedIconPath": "/images/tab/my@highlight.png",
         "iconPath": "/images/tab/my.png",
