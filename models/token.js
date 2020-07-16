@@ -5,7 +5,6 @@ class Token{
     this.tokenUrl = config.api_base_url + 'token'
   }
   varify(){
-    console.log('varify')
     const token = wx.getStorageSync('token')
     if(!token){
       this.getTokenFromServer()
@@ -42,7 +41,6 @@ class Token{
           },
           success: (res)=> {
             wx.setStorageSync('token', res.data.token)
-            console.log(res)
             callBack && callBack(res)
           }
         })

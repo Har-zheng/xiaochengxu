@@ -37,6 +37,7 @@ class BookModel extends HTTP {
     })
   }
   getComment(bid, comment) {
+    // 提交内容前先进行 ,敏感词过滤
     return this.request({
       url: `book/add/short_comment`,
       method: 'POST',

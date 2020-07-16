@@ -87,16 +87,26 @@ Page({
       return
     }
     bookModel.getComment(this.data.book.id, comment).then(res => {
+      console.log(res)
+      if(res.errcode){
+        wx.showToast({
+          title: '敏感性词汇禁止提交!请重新输入',
+          icon: 'none'
+        })
+        return
+      }
       wx.showToast({
         title: '+1',
         icon: "none"
       })
+      console.log(comment)
+      console.log( this.data.comments)
       this.data.comments.unshift({
         content: comment,
         nums: 1
       })
       this.setData({
-        comment: this.data.comments,
+        comments: this.data.comments,
         posting: false
       })
     })

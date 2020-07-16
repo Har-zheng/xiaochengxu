@@ -40,7 +40,6 @@ class HTTP {
             success: (res) => {
                 // startwith  首部的匹配
                 // endwith 尾部部的匹配
-                console.log(res)
                 const code = res.statusCode.toString()
                 if (code.startsWith('2')) {
                     resolve(res.data)

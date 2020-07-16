@@ -7,7 +7,6 @@ class CalssicModel extends HTTP {
             url: 'classic/latest'
         })
         latest.then(res => {
-            console.log(res)
             sCallback(res)
             this._setLatestIndex(res.index)
             let key = this._getkey(res.index)
