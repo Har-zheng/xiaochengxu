@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Har-zheng/xiaochengxu#readme",
   "dependencies": {
-    "js-base64": "^2.6.3"
+    "js-base64": "^2.6.3",
+    "lin-ui": "^0.8.4"
   }
 }

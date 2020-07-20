@@ -1,9 +1,15 @@
 /* pages/about/about.wxss */
 
-
+page{
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+}
 .fonst-style{
   font-size: 24rpx;
   
+}
+.conteiner{
+  margin: 10rpx ;
 }
 .myselfe{
   margin: 20rpx 0rpx;
@@ -11,32 +17,22 @@
   padding: 10rpx;
 }
 .content{
-  padding: 10rpx;
-  font-size: 30rpx;
-  letter-spacing: 6rpx;
-  color: #606266;
+  font-size: 26rpx;
+  /* letter-spacing: 6rpx; */
+  color: #585858;
+  width: 100%;
+}
+.content .pan{
+
+  width: 300rpx;
 }
 .title{
-  width: 100%;
   font-size: 26rpx;
   text-align: center;
   font-weight: bold;
   padding-left:  20rpx;
 }
 
-.about{
-  width:750rpx;
-  height:100%;
-
-}
-.vendor{
-  position: absolute;
-  top:800rpx;
-  left:500rpx;
-  height:70rpx;
-  width:190rpx;
-  z-index: 99;
-}
-.nav{
-  height:70rpx;
+ .content-font{
+  color: #ad6869;
 }

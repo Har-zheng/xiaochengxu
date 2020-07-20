@@ -1,25 +1,56 @@
 <!-- <image class="about"  /> -->
- <!-- <navigator class="nav" target="miniProgram" app-id="wx8ffc97ad5bcccc89" open-type="navigate">
+<!-- <navigator class="nav" target="miniProgram" app-id="wx8ffc97ad5bcccc89" open-type="navigate">
  <image class="vendor" src="/images/my/vendor.png"></image>
  </navigator>  -->
- <view class="about">
-<view class="title fonst-style"> “业精于勤，荒于嬉；行成于思，毁于随。——韩愈” </view>
-<view class="fonst-style myselfe">  开发是自己的喜欢,也是生活所迫  </view>
-<view class="content ">
-  写小程序的小心愿,终于完成了! 学习了很多.深入学习小程序其实也有很多路需要走,
-  下面我分享下完成这个小程序我所看的资源教程,分享大家,感兴趣的话学习收藏!
-</view>
-<text class="fonst-style"> 后期的话!我会在这个小程序开发分享资源的功能,感兴趣多关注下!!!☆⌒(*^-゜)v </text>
-<view>
-  <h4>
-    (纯正商业级应用-微信小程序开发实战) 建议资金充裕的话请购买正版课程
-  </h4>   
+<view class="about">
+	<view class="title fonst-style"> “业精于勤，荒于嬉；行成于思，毁于随。——韩愈” </view>
+	<view class="fonst-style myselfe"> 你的工作和你所喜欢相配备，那真的太幸运了。</view>
 
-<view>
-    链接: https://pan.baidu.com/s/1SmtgBbYMYXnwRanMKhkT2A 提取码: b2vg 
-    复制这段内容后打开百度网盘手机 App，操作更方便哦
-    <button>点击复制</button>
-</view>
+	<l-card class="conteiner" type="primary" plaintext="{{true}}" title="段一">
+		<!-- 此处为content -->
+		<view class=" content">
+			写小程序的小心愿,终于完成了!从前端ui实现到服务端开发,再到完善的部署, 学习了很多.深入学习小程序其实也有很多路需要走,
+			下面我分享下完成这个小程序我所看的资源教程,分享大家,感兴趣的话学习收藏!
+		</view>
+	</l-card>
+	<l-card class="conteiner" type="primary" plaintext="{{true}}" title="段二">
+		<!-- 此处为content -->
+		<view class=" content">
+			后期的话!我会在这个小程序开发分享资源的功能,感兴趣多关注下!!!☆⌒(*^-゜)v
+		</view>
+	</l-card>
+	<l-card class="conteiner" type="cover" image="/images/my/diram.png" title="前端小程序">
+		<view class="content pan">
+			(纯正商业级应用-微信小程序开发实战)
+			链接：https://pan.baidu.com/s/
+			135Mg72RDYiYYHNKQTxo2Xg
+			提取码：zhz9
+			<l-button bind:lintap="textPaste">点击复制</l-button>
+		</view>
+	</l-card>
+	<l-card class="conteiner" type="primary" plaintext="{{true}}" title="服务端开发">
+		<!-- 此处为content -->
+		<view class="content pan">
+			<text>
+    	(纯正商业级应用－Node.js Koa2开发微信小程序服务端)链接：https://pan.baidu.com/s/
+      18INvs6WU5Us65ZkpBocSNA提取码：zhz9
+    </text>
 
-</view>
+			<l-button bind:lintap="textPaste2">点击复制</l-button>
+		</view>
+	</l-card>
+
+	<l-card class="conteiner" type="primary" plaintext="{{true}}" title="免责声明">
+		<view class="content content-font">
+			本站提供的资源，都来自网络，版权争议与本站无关，所有内容及软件的文章仅限用于学习和研究目的。不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负，不保证内容的长久可用性，通过使用本站内容随之而来的风险与本站无关，您必须在下载后的24个小时之内，从您的电脑/手机中彻底删除上述内容。如果您喜欢该程序，请支持正版软件，购买注册，得到更好的正版服务。
+			侵删请致信E-mail：1456421562@qq.com
+		</view>
+	</l-card>
+	<l-toast show="{{isSuccess}}" icon="success" title="复制成功" />
+
+	<view>
+
+
+
+	</view>
 </view>

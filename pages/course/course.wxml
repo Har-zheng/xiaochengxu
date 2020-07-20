@@ -1,1 +1,11 @@
-<image class="img" src="/images/my/course.png"></image>
+<!-- <image class="img" src="/images/my/course.png"></image> -->
+<view> 
+  <view class="title">小程序从开发到部署上线的流程</view>  
+  <l-card class="conteiner" type="primary" plaintext="{{true}}" title="前置工作">
+		<!-- 此处为content -->
+		<view class=" content">
+			写小程序的小心愿,终于完成了!从前端ui实现到服务端开发,再到完善的部署, 学习了很多.深入学习小程序其实也有很多路需要走,
+			下面我分享下完成这个小程序我所看的资源教程,分享大家,感兴趣的话学习收藏!
+		</view>
+	</l-card>
+</view>

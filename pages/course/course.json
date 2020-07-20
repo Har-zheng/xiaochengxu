@@ -1,3 +1,7 @@
 {
-  "backgroundColor": "#f5f5f5"
+  "backgroundColor": "#f5f5f5",
+  "usingComponents": {
+    "l-icon": "/miniprogram_npm/lin-ui/icon/index",
+    "l-card": "/miniprogram_npm/lin-ui/card/index"
   }
+}
